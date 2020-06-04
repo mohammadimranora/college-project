@@ -11,7 +11,8 @@
 	$height=45;
 
 	header('content-type:image/jpeg');
-	$font='/xampp/htdocs/ocs-server/stylemy.ttf';
+	putenv('GDFONTPATH=' . realpath('.'));
+	$font='stylemy';
 	$image=imagecreate($width,$height);
 	imagecolorallocate($image,215,215,215);
 	$font_color=imagecolorallocate($image,0,0,255);
