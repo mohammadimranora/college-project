@@ -101,13 +101,13 @@ function clean_data($data)
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title> Allotment Seat & Center | OCS</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="./index_files/bootstrap.min.css">
-	<link rel="stylesheet" href="./index_files/custom.css">
-	<script src="./index_files/jquery.min.js.download"></script>
-	<script src="./index_files/bootstrap.min.js.download"></script>
-	<link rel="stylesheet" type="text/css" href="./index_files/custom1.css">
-	<script type="text/javascript" src="./index_files/allotment.js"></script>
-	<script type="text/javascript" src="./index_files/courseSelect.js"></script>
+	<link rel="stylesheet" href="./static/bootstrap.min.css">
+	<link rel="stylesheet" href="./static/custom.css">
+	<script src="./static/jquery.min.js.download"></script>
+	<script src="./static/bootstrap.min.js.download"></script>
+	<link rel="stylesheet" type="text/css" href="./static/custom1.css">
+	<script type="text/javascript" src="./static/allotment.js"></script>
+	<script type="text/javascript" src="./static/courseSelect.js"></script>
 </head>
 
 <body>
@@ -122,7 +122,7 @@ function clean_data($data)
 					</div>
 					<div class="panel-body">
 						<div class="msgimg">
-							<img src="./index_files/img_avatar.png" style=" width: 100px;">
+							<img src="./static/img_avatar.png" style=" width: 100px;">
 
 						</div>
 						<ul class="nav nav-pills nav-stacked" role="tablist" style="padding-top: 10px; display: block;">

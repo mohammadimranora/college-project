@@ -43,7 +43,7 @@ if (isset($_POST['update'])) {
 		<div class="row">
 			<div class="col-md-2 col-xs-12">
 				<a href="adminindex.php">
-					<img src="./index_files/ocslogo.png" class="img-responsive classLogo"></a>
+					<img src="./static/ocslogo.png" class="img-responsive classLogo"></a>
 			</div>
 
 			<div class="col-md-7 col-xs-12" style="padding-top: 8px;color: #4444a9;">
@@ -101,7 +101,7 @@ if (isset($_POST['update'])) {
 				</div>
 				<div class="panel-body">
 					<div class="msgimg">
-						<img src="./index_files/img_avatar.png" style=" width: 100px;">
+						<img src="./static/img_avatar.png" style=" width: 100px;">
 
 					</div>
 					<ul class="nav nav-pills nav-stacked" role="tablist" style="padding-top: 10px; display: block;">

@@ -10,7 +10,7 @@
 				</div>
 				<div class="panel-body">
 					<div class="msgimg">
-						<img src="./index_files/img_avatar.png" style=" width: 100px;">
+						<img src="./static/img_avatar.png" style=" width: 100px;">
 						
 					</div>
 					<p align="justify"><br>Dear Parents, Guardians and Students,<br>
@@ -42,7 +42,7 @@
 				</div>
 				<div class="panel-body">
 					<div class="msgimg">
-						<img src="./index_files/img_avatar.png" style=" width: 100px;">
+						<img src="./static/img_avatar.png" style=" width: 100px;">
 						
 					</div>
 					<p align="justify"><br>Dear Parents, Guardians and Students,<br>
@@ -73,7 +73,7 @@
 				</div>
 				<div class="panel-body">
 					<div class="msgimg">
-						<img src="./index_files/img_avatar.png" style=" width: 100px;">
+						<img src="./static/img_avatar.png" style=" width: 100px;">
 						
 					</div>
 					<p align="justify"><br>Dear Parents, Guardians and Students,<br>

@@ -56,7 +56,7 @@ if (isset($_POST['pay'])) {
 				<div class="panel-body">
 					<div class="msgimg">
 						<?php if (!$pic) {  ?>
-							<img src="./index_files/img_avatar.png" style=" width: 100px;">
+							<img src="./static/img_avatar.png" style=" width: 100px;">
 						<?php } else {  ?>
 							<img src="<?php echo $pic; ?>" style=" width: 100px;">
 						<?php } ?>

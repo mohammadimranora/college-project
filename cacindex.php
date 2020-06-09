@@ -11,11 +11,11 @@ if (!isset($_SESSION['adminid'])) {
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title> CAC Home | OCS</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="./index_files/bootstrap.min.css">
-	<link rel="stylesheet" href="./index_files/custom.css">
-	<script src="./index_files/jquery.min.js.download"></script>
-	<script src="./index_files/bootstrap.min.js.download"></script>
-	<link rel="stylesheet" type="text/css" href="./index_files/custom1.css">
+	<link rel="stylesheet" href="./static/bootstrap.min.css">
+	<link rel="stylesheet" href="./static/custom.css">
+	<script src="./static/jquery.min.js.download"></script>
+	<script src="./static/bootstrap.min.js.download"></script>
+	<link rel="stylesheet" type="text/css" href="./static/custom1.css">
 	<script type="text/javascript">
 		function preventBack() {
 			window.history.forward();
@@ -40,7 +40,7 @@ if (!isset($_SESSION['adminid'])) {
 					</div>
 					<div class="panel-body">
 						<div class="msgimg">
-							<img src="./index_files/img_avatar.png" style=" width: 100px;">
+							<img src="./static/img_avatar.png" style=" width: 100px;">
 						</div>
 						<ul class="nav nav-pills nav-stacked" role="tablist" style="padding-top: 10px; display: block;">
 							<li class="active"><a href="cacindex.php">Home</a></li>

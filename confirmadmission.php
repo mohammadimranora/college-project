@@ -17,7 +17,7 @@ if (!isset($_SESSION['adminid'])) {
 				</div>
 				<div class="panel-body">
 					<div class="msgimg">
-						<img src="./index_files/img_avatar.png" style=" width: 100px;">
+						<img src="./static/img_avatar.png" style=" width: 100px;">
 
 					</div>
 					<ul class="nav nav-pills nav-stacked" role="tablist" style="padding-top: 10px; display: block;">

@@ -12,11 +12,11 @@ $pic = $_SESSION["UserData"]["pic"];
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title> User Home | OCS</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="./index_files/bootstrap.min.css">
-	<link rel="stylesheet" href="./index_files/custom.css">
-	<script src="./index_files/jquery.min.js.download"></script>
-	<script src="./index_files/bootstrap.min.js.download"></script>
-	<link rel="stylesheet" type="text/css" href="./index_files/custom1.css">
+	<link rel="stylesheet" href="./static/bootstrap.min.css">
+	<link rel="stylesheet" href="./static/custom.css">
+	<script src="./static/jquery.min.js.download"></script>
+	<script src="./static/bootstrap.min.js.download"></script>
+	<link rel="stylesheet" type="text/css" href="./static/custom1.css">
 	<script type="text/javascript">
 		function preventBack() {
 			window.history.forward();
@@ -41,7 +41,7 @@ $pic = $_SESSION["UserData"]["pic"];
 					<div class="panel-body">
 						<div class="msgimg">
 							<?php if (!$pic) {  ?>
-								<img src="./index_files/img_avatar.png" style=" width: 100px;">
+								<img src="./static/img_avatar.png" style=" width: 100px;">
 							<?php } else {  ?>
 								<img src="<?php echo $pic; ?>" style=" width: 100px;">
 							<?php } ?>
