@@ -3,7 +3,7 @@
   		<div class="row">
   			<div class="col-md-2 col-xs-12"> 
   				<a href="index.php">
-  					<img src="static/ocslogo.png" class="img-responsive classLogo"></a>
+  					<img src="static/images/ocslogo.png" class="img-responsive classLogo"></a>
 			</div>
  
 			<div class="col-md-7 col-xs-12" style="padding-top: 8px;color: #4444a9;"> 

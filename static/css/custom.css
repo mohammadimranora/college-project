@@ -1,11 +1,9 @@
-.error
-{
-color:red;
+.error {
+    color: red;
 }
 
-.MainContainer
-{
-	min-height:428px;
+.MainContainer {
+    min-height: 428px;
 }
 
 @font-face {
@@ -13,20 +11,12 @@ color:red;
     src: url(NotoNastaliqUrdu-Regular.ttf);
 }
 
-
-
-
 .form-horizontal .control-label {
-	font-weight: 500;
+    font-weight: 500;
     font-family: nastaliq;
 }
-
-
 
 .UrduText {
-	font-weight: 500;
+    font-weight: 500;
     font-family: nastaliq;
 }
-
-
-
