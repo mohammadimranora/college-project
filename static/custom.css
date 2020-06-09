@@ -1,0 +1,32 @@
+.error
+{
+color:red;
+}
+
+.MainContainer
+{
+	min-height:428px;
+}
+
+@font-face {
+    font-family: nastaliq;
+    src: url(NotoNastaliqUrdu-Regular.ttf);
+}
+
+
+
+
+.form-horizontal .control-label {
+	font-weight: 500;
+    font-family: nastaliq;
+}
+
+
+
+.UrduText {
+	font-weight: 500;
+    font-family: nastaliq;
+}
+
+
+
