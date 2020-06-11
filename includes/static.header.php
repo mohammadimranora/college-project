@@ -18,10 +18,7 @@
 		<script type="text/javascript" src="./static/js/changepwd.js"></script>
 		<script type="text/javascript" src="./static/js/createuser.js"></script>
 		<script type="text/javascript" src="./static/js/deleteuser.js"></script>
-		<script type="text/javascript" src="./static/js/PersionalDetail.js"></script>
-		<script type="text/javascript" src="./static/js/courseSelect.js"></script>
-		<script type="text/javascript" src="./static/js/courseSelect1.js"></script>
-		<script type="text/javascript" src="./static/js/urdu.js"></script>
-		<script type="text/javascript" src="./static/js/updateuser.js"></script> 
+		<script type="text/javascript" src="./static/js/updateuser.js"></script>
+		<script type="text/javascript" src="./static/js/student.main.js"></script> 
  	</head>
 <body>

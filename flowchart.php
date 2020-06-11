@@ -5,7 +5,7 @@
 <div class="container MainContainer">
 	<div class="row">
 		<div class="col-xs-12 col-md-12">
-			<center><img src="./static/flowchart.png" height="520" width="900" class="img-responsive"></center>
+			<center><img src="./static/images/flowchart.png" height="520" width="900" class="img-responsive"></center>
 		</div>
 	</div>
 </div>
