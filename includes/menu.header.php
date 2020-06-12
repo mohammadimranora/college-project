@@ -2,7 +2,7 @@
 	<div class="container">
   		<div class="row">
   			<div class="col-md-2 col-xs-12"> 
-  				<a href="index.php">
+  				<a href="<?php echo url()."/index.php"; ?>">
   					<img src="static/images/ocslogo.png" class="img-responsive classLogo"></a>
 			</div>
  

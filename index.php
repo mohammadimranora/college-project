@@ -1,5 +1,5 @@
 <?php
-require 'connect.php';
+require 'common/connect.php';
 session_start();
 $errLogin = $CounsellingStatus = "";
 if (isset($_POST['login'])) {
@@ -19,12 +19,12 @@ if (isset($_POST['login'])) {
 			$_SESSION['username'] = $row["name"];
 			$_SESSION['courseid'] = $row["courseid"];
 			$_SESSION['UserData'] = $row;
-
 			$resultmy = "SELECT `msg`, `status` FROM `isadmissionopen`";
 			$rowStatus = mysqli_query($con, $resultmy);
 			$datarow = mysqli_fetch_array($rowStatus);
 			if ($datarow[1] == 1) {
-				header('location: userindex.php');
+				$URL = url().'/student/userindex.php';
+				header("location: $URL ");
 			} else {
 				$CounsellingStatus = $datarow[0];
 			}
@@ -135,7 +135,7 @@ function clean_data($data)
 						</div>
 						<div class="form-group">
 							<div class="col-sm-12">
-								<img src="captcha.php">
+								<img src="common/captcha.php">
 							</div>
 						</div>
 						<br>
@@ -147,7 +147,7 @@ function clean_data($data)
 						</div>
 					</form>
 				</div>
-				<div class="panel-footer"><small><a href="forgotpass.php">Forgot Password</a></small>
+				<div class="panel-footer"><small><a href="common/forgotpass.php">Forgot Password</a></small>
 				</div>
 			</div>
 			<div class="panel panel-primary">

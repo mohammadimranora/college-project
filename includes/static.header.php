@@ -19,6 +19,7 @@
 		<script type="text/javascript" src="./static/js/createuser.js"></script>
 		<script type="text/javascript" src="./static/js/deleteuser.js"></script>
 		<script type="text/javascript" src="./static/js/updateuser.js"></script>
-		<script type="text/javascript" src="./static/js/student.main.js"></script> 
+		<script type="text/javascript" src="./static/js/student.main.js"></script>
+		<script type="text/javascript" src="./static/js/admin.login.common.js "></script>
  	</head>
 <body>

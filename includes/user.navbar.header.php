@@ -10,7 +10,7 @@
         <div class="container">
             <ul class="headerNav nav navbar-nav " style=" float: right;">
                 <li class=""><a>Hi...<?php echo $_SESSION['username']; ?></a></li>
-                <li class=""><a href="logout.php">Logout</a></li>
+                <li class=""><a href="<?php echo url()."/common/logout.php";?>">Logout</a></li>
 
             </ul>
         </div>

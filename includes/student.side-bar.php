@@ -8,7 +8,7 @@
                 <?php if (!$pic) {  ?>
                     <img src="./static/images/img_avatar.png" style=" width: 100px;">
                 <?php } else {  ?>
-                    <img src="<?php echo $pic; ?>" style=" width: 100px;">
+                    <img src="<?php echo "../".$pic; ?>" style=" width: 100px;">
                 <?php } ?>
             </div>
             <ul class="nav nav-pills nav-stacked" role="tablist" style="padding-top: 10px; display: block;">
