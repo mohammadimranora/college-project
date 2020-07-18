@@ -6,30 +6,8 @@ if (!isset($_SESSION['userid'])) {
 	header("location: $URL ");
 }
 $pic = $_SESSION["UserData"]["pic"];
-
-$c_villmohalla1 = $c_post1 = $c_policestation1 = $c_district1 = $c_state1 = $c_pin1 = "";
-$c_villmohalla2 = $c_post2 = $c_policestation2 = $c_district2 = $c_state2 = $c_pin2 = "";
 $msg = "";
 if (isset($_POST['save'])) {
-
-	$c_villmohalla1 = $_POST['villmoh1'];
-	$c_post1 = $_POST['post1'];
-	$c_policestation1 = $_POST['policestation1'];
-	$c_district1 = $_POST['district1'];
-	$c_state1 = $_POST['post1'];
-	$c_pin1 = $_POST['pin1'];
-
-	$c_villmohalla2 = $_POST['villmoh2'];
-	$c_post2 = $_POST['post2'];
-	$c_policestation2 = $_POST['policestation2'];
-	$c_district2 = $_POST['district2'];
-	$c_state2 = $_POST['post2'];
-	$c_pin2 = $_POST['pin2'];
-
-	$sqlInsert = "INSERT INTO `address`(`sid`, `c_vill_moh`, `c_post`, `c_ps`, `c_district`, `c_state`, `c_pincode`, `p_vill_moh`, `p_post`, `p_ps`, `p_district`, `p_state`, `p_pincode`) VALUES 
-		('$_SESSION[userid]','$c_villmohalla1','$c_post1','$c_policestation1','$c_district1','$c_state1','$c_pin1','$c_villmohalla2','$c_post2','$c_policestation2','$c_district2','$c_state2','$c_pin2')";
-
-	$Status = mysqli_query($con, $sqlInsert);
 
 	if ($Status == 1) {
 		$URL = url()."/student/counsellstage4.php";

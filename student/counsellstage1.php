@@ -1,41 +1,28 @@
 <?php
 require_once "../common/connect.php";
+require_once "../student/services/student-service.php";
+
 session_start();
 if (!isset($_SESSION['userid'])) {
-	$URL = url()."/index.php";
+	$URL = url() . "/index.php";
 	header("location: $URL ");
 }
+
 $pic = $_SESSION["UserData"]["pic"];
-
-$msg = $name = $id = $course = $category = $rank = "";
+$msg = "";
 $id = $_SESSION["userid"];
+$studentData = StudentService::getStudentData($id);
+$_SESSION['courseid'] = isset($studentData['courseid']) ? $studentData['courseid'] : null;
+$isApplied = StudentService::isApplied($id);
 
-$sql = "select *from student_info where sid='$id'";
-$result = mysqli_query($con, $sql);
-$row = mysqli_fetch_assoc($result);
-
-$name = $row["name"];
-$id = $row["sid"];
-
-$course = $row["courseid"];
-$category = $row["category"];
-$rank = $row["rank_scored"];
-$_SESSION['courseid'] = $course;
-
-$sqlstchk = "select * FROM `counsell_status` where sid='$id'";
-$result1 = mysqli_query($con, $sqlstchk);
-$row_num = mysqli_num_rows($result1);
-
-if ($row_num == 1) {
-
+if (!$isApplied) {
 	$msg = "You have already applied for Counselling, need not to submit data again. Thank You. Wish you for your bright future.";
 } else {
 	if (isset($_POST['procced'])) {
-		$URL = url()."/student/counsellstage2.php";
+		$URL = url() . "/student/counsellstage2.php";
 		header("location: $URL ");
 	}
 }
-mysqli_close($con);
 ?>
 <?php require_once "../includes/static.header.php" ?>
 <?php require_once "../includes/menu.header.php" ?>
@@ -50,27 +37,27 @@ mysqli_close($con);
 					<form action="" class="form-horizontal" method="post" accept-charset="utf-8">
 						<div class="form-group">
 							<div class="col-sm-12">
-								<input type="text" class="form-control" name="name" readonly="" value="<?php echo $name; ?>">
+								<input type="text" class="form-control" name="name" readonly="" value="<?php echo isset($studentData['name']) ? $studentData['name'] : ''; ?>">
 							</div>
 						</div>
 						<div class="form-group">
 							<div class="col-sm-12">
-								<input type="text" class="form-control" name="id" readonly="" value="<?php echo $id; ?>">
+								<input type="text" class="form-control" name="id" readonly="" value="<?php echo isset($studentData['sid']) ? $studentData['sid'] : ''; ?>">
 							</div>
 						</div>
 						<div class="form-group">
 							<div class="col-sm-12">
-								<input type="text" class="form-control" name="course" readonly="" value="<?php echo $course; ?>">
+								<input type="text" class="form-control" name="course" readonly="" value="<?php echo isset($studentData['courseid']) ? $studentData['courseid'] : ''; ?>">
 							</div>
 						</div>
 						<div class="form-group">
 							<div class="col-sm-12">
-								<input type="text" class="form-control" name="category" readonly="" value="<?php echo $category; ?>">
+								<input type="text" class="form-control" name="category" readonly="" value="<?php echo isset($studentData['category']) ? $studentData['category'] : ''; ?>">
 							</div>
 						</div>
 						<div class="form-group">
 							<div class="col-sm-12">
-								<input type="text" class="form-control" name="rank" readonly="" value="<?php echo $rank; ?>">
+								<input type="text" class="form-control" name="rank" readonly="" value="<?php echo isset($studentData['rank_scored']) ? $studentData['rank_scored'] : ''; ?>">
 							</div>
 						</div>
 

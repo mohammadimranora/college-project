@@ -1,32 +1,25 @@
 <?php
-require 'common/connect.php';
+require_once "common/connect.php";
+require_once "student/services/student-service.php";
+
 session_start();
-$errLogin = $CounsellingStatus = "";
+$errLogin = "";
+
 if (isset($_POST['login'])) {
 
-	$userid = clean_data($_POST['user_id']);
-	$pass = clean_data($_POST['password']);
-	$captcha = clean_data($_POST['captcha']);
-	$sql = "select *from student_login where sid='$userid' AND password='$pass'";
-	$result = mysqli_query($con, $sql);
-	if (mysqli_num_rows($result) == 1) {
+	$status = StudentService::verifyStudent($_POST);
+	$captcha = StudentService::cleanData($_POST['captcha']);
+	$userId = $_POST['user_id'];
+	if ($status) {
 		if ($captcha == $_SESSION['code']) {
-			$_SESSION['userid'] = $userid;
-			$sqlname = "select * from student_info where sid='$userid'";
-			$run = mysqli_query($con, $sqlname);
-			$row = mysqli_fetch_assoc($run);
-			$row1 = mysqli_fetch_assoc($result);
-			$_SESSION['username'] = $row["name"];
-			$_SESSION['courseid'] = $row["courseid"];
-			$_SESSION['UserData'] = $row;
-			$resultmy = "SELECT `msg`, `status` FROM `isadmissionopen`";
-			$rowStatus = mysqli_query($con, $resultmy);
-			$datarow = mysqli_fetch_array($rowStatus);
-			if ($datarow[1] == 1) {
-				$URL = url().'/student/userindex.php';
+			$_SESSION['userid'] = $_POST['user_id'];
+			StudentService::loadStudentDataSession($userId);
+			$dataAdmission = StudentService::isAdmissionOpen();
+			if (is_bool($dataAdmission) && $dataAdmission == true) {
+				$URL = url() . '/student/userindex.php';
 				header("location: $URL ");
 			} else {
-				$CounsellingStatus = $datarow[0];
+				$errLogin = $dataAdmission;
 			}
 		} else {
 			$errLogin = "Invalid Captcha";
@@ -34,14 +27,6 @@ if (isset($_POST['login'])) {
 	} else {
 		$errLogin = "Either Your User ID Or Password is Wrong";
 	}
-}
-function clean_data($data)
-{
-	$data = trim($data);
-	$data = htmlspecialchars($data);
-	$data = stripcslashes($data);
-	$data = strip_tags($data);
-	return $data;
 }
 ?>
 <?php require_once "includes/static.header.php" ?>
@@ -115,7 +100,6 @@ function clean_data($data)
 				<div class="panel-body">
 					<form action="" class="form-horizontal" method="post" accept-charset="utf-8">
 						<span style="color: red; font-weight: bold;"><?php echo "$errLogin" ?></span>
-						<span style="color: red; font-weight: bold; text-transform: capitalize;"><?php echo $CounsellingStatus; ?></span>
 						<div class="form-group">
 							<div class="col-sm-12">
 								<input type="text" value="" class="form-control" required="" name="user_id" placeholder="Enter your ID" id="user_id" autocomplete="off">

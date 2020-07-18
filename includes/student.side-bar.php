@@ -17,7 +17,7 @@
                 <li><a href="checkstatus.php">Check Status</a></li>
                 <li><a href="feesubmission.php">Fee Submission</a></li>
                 <li><a href="changepassword.php">Change Password</a></li>
-                <li><a href="logout.php">Logout</a></li>
+                <li><a href="<?php echo url()."/common/logout.php"; ?>">Logout</a></li>
             </ul>
         </div>
     </div>
